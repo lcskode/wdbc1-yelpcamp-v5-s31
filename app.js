@@ -21,7 +21,7 @@ mongoose.connect("mongodb://localhost/yelp_camp");
 // 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-console.log(__dirname);
+// console.log(__dirname);
 // set body parser
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -56,10 +56,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 
  
 // ============================================================================
-// ROUTES
+// CAMPGROUND ROUTES
 // ============================================================================
 
-// root ROUTE
+// ROOT ROUTE
 app.get("/", function(req, res){
   res.render("landing");
 });
@@ -115,7 +115,7 @@ app.get("/campgrounds/:id", function(req, res){
     if (err) {
       console.log(err);
     } else {
-      console.log(foundCampground);
+      // console.log(foundCampground);
       // render show template with that campground
       // res.send("THIS WILL BE THE SHOW PAGE SOON!");
       res.render("campgrounds/show", {campground: foundCampground});
@@ -135,7 +135,7 @@ app.get("/campgrounds/:id/comments/new", function(req, res){
       res.render("comments/new", {campground: campground});
     }
   })
-  
+
 });
 
 app.post("/campgrounds/:id/comments", function(req, res){
