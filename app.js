@@ -20,6 +20,8 @@ mongoose.connect("mongodb://localhost/yelp_camp");
 
 // 
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
+console.log(__dirname);
 // set body parser
 app.use(bodyParser.urlencoded({extended: true}));
 

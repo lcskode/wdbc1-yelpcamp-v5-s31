@@ -1,4 +1,7 @@
-#### S31-L278 YelpCamp V5  
+#### S31-L282 YelpCamp V5
+****
+
+#### S31-L280 YelpCamp V5  
 **Style Show Page**
 * Add sidebar to a show page  
 * Display comments nicely  
